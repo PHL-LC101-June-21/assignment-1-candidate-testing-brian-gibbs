@@ -95,16 +95,16 @@ function gradeQuiz(candidateAnswers) {
 // Issues: candidate Name not passing into function, for loop
 // only running twice because logic is wrong. moved       console.log out of if statement 
 
-  let grade = 0;
- 
+let grade = 0;
+let correctAnswers = ['Sally Ride', 'True', 40, 'Trajectory', 3];
 
 
 console.log(`\n\nCandidate Name: ${candidateName}`);
 
   for (let x = 0; x <= 4 ; x++) {
-    if (candidateAnswers[x].tolowercase == correctAnswers[x].tolowercase){
+    if (candidateAnswers[x].tolowercase  == correctAnswers[x].tolowercase){
       grade++
-       /*console.log(`${x++} )  ${questions[x]}`)
+      /* console.log(`${x++} )  ${questions[x]}`)
       console.log(`Your Answer: ${candidateAnswers[x]}`)
       console.log(`Correct Answer: ${correctAnswers[x]}`)
       console.log(`\n`); */
