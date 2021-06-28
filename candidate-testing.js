@@ -4,7 +4,7 @@ const input = require('readline-sync');
 // TODO 1.1a: Define candidateName // 
 
 
-const candidateName = ""
+let candidateName = ""
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 
@@ -96,12 +96,13 @@ function gradeQuiz(candidateAnswers) {
 // only running twice because logic is wrong. moved       console.log out of if statement 
 
   let grade = 0;
-  let correctAnswers = ['Sally Ride', 'True', 40, 'Trajectory', 3];
+ 
+
 
 console.log(`\n\nCandidate Name: ${candidateName}`);
 
   for (let x = 0; x <= 4 ; x++) {
-    if (candidateAnswers[x] == correctAnswers[x]){
+    if (candidateAnswers[x].tolowercase == correctAnswers[x].tolowercase){
       grade++
        /*console.log(`${x++} )  ${questions[x]}`)
       console.log(`Your Answer: ${candidateAnswers[x]}`)
@@ -150,7 +151,7 @@ function runProgram() {
   askQuestion();
   
   // ** needs to calculate grade and print results
- gradeQuiz(this.candidateAnswers); //
+ gradeQuiz(this.candidateAnswers, candidateName); //
  
 }
 
